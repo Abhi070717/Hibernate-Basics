@@ -135,8 +135,8 @@ public class UserModel {
 		// limit pageNo, pageSize
 		if (pageSize > 0) {
 			pageNo = (pageNo - 1) * pageSize;
-			criteria.setFirstResult(pageNo); // initial index
-			criteria.setMaxResults(pageSize);// number of record
+			criteria.setFirstResult(pageNo); // Initial index
+			criteria.setMaxResults(pageSize);// Number of record
 		}
 
 		list = criteria.list();

@@ -1,6 +1,7 @@
 package com.rays.user;
 
 import java.text.SimpleDateFormat;
+import java.util.List;
 
 public class TestUserModel {
 
@@ -8,6 +9,8 @@ public class TestUserModel {
 		testAdd();
 //		testFindByLogin();
 //		testAuthenticate();
+		testSearch();
+		
 	}
 
 	private static void testAuthenticate() {
@@ -48,7 +51,6 @@ public class TestUserModel {
 		} else {
 			System.out.println("user not found");
 		}
-
 	}
 
 	private static void testAdd() throws Exception {
@@ -68,5 +70,11 @@ public class TestUserModel {
 		model.add(dto);
 
 	}
+	private static void testSearch() throws Exception {
+		UserDTO dto = new UserDTO();
+		UserModel model = new UserModel();
+		List<UserDTO> list = model.search(dto, 0, 10);
+	}
+
 
 }

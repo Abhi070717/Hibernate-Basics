@@ -20,15 +20,15 @@ public class TestUser {
 
 		TestUser test = context.getBean("TestUser", TestUser.class);
 
-		test.testAdd();
-	//	test.testUpdate();
-	//	test.testDelete();
+//		test.testAdd();
+//		test.testUpdate();
+		test.testDelete();
 }
 
 	private void testAdd() {
 
 		UserDto dto = new UserDto();
-		dto.setId(1);
+		dto.setId(3);
 		dto.setFirstName("Abhishish");
 		dto.setLastName("Bhawsar");
 		dto.setLogin("abhi@gmail.com");
@@ -58,11 +58,9 @@ public class TestUser {
 		UserDto dto = new UserDto();
 		dto.setId(3);
 		
-		int id = service.update(dto);
+		int id = service.delete(dto);
 
 		System.out.println("data delted successfully at id: " + id);
 		
-		
-		// Doubt : From DB data is deleted but id is present
 	}
 }

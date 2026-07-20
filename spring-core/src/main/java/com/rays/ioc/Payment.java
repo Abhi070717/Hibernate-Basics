@@ -1,7 +1,7 @@
 package com.rays.ioc;
 
 public class Payment {
-	
+
 	private int balance;
 
 	public int getBalance() {
@@ -11,11 +11,11 @@ public class Payment {
 	public void setBalance(int balance) {
 		this.balance = balance;
 	}
-	
+
 	public int pay(int amount) {
-		if(amount > balance) {
+		if (amount > balance) {
 			System.out.println("Insufficient balance");
-		}else {
+		} else {
 			balance = balance - amount;
 			return balance;
 		}

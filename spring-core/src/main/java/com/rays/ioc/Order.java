@@ -12,12 +12,11 @@ public class Order {
 //	public void setPayment(Payment payment) {
 //		this.payment = payment;
 //	}
-	
+
 	public Order(Inventory inventory, Payment payment) {
 		this.inventory = inventory;
 		this.payment = payment;
 	}
-	
 
 	public void order(int item) {
 
@@ -35,8 +34,5 @@ public class Order {
 		System.out.println("remaining book: " + remainingBooks);
 
 	}
-
-	
-
 
 }
